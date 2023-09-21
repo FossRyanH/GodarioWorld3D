@@ -1,0 +1,3 @@
+res://Scenes/player.tscn
+res://Scripts/GDScript/player.gd
+res://Scenes/test_level.tscn

@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://kfw1o08waukd"]
+
+[ext_resource type="PackedScene" uid="uid://cc3ffvtlrmokl" path="res://Scenes/player.tscn" id="1_kkm5n"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ar1bb"]
+sky_curve = 0.0265165
+ground_curve = 0.0887657
+
+[sub_resource type="Sky" id="Sky_gul2g"]
+sky_material = SubResource("ProceduralSkyMaterial_ar1bb")
+
+[sub_resource type="Environment" id="Environment_xcl5r"]
+background_mode = 2
+sky = SubResource("Sky_gul2g")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 3
+ssr_enabled = true
+ssao_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_normalized = true
+glow_bloom = 0.15
+glow_blend_mode = 0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.025
+volumetric_fog_sky_affect = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thdlx"]
+albedo_color = Color(0.345098, 0.443137, 0.235294, 1)
+uv2_triplanar = true
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xcl5r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.27703, 0.960861, 0, -0.960861, 0.27703, 0, 5.91751, 0)
+shadow_enabled = true
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.323936, 0)
+use_collision = true
+size = Vector3(300, 0.5, 300)
+material = SubResource("StandardMaterial3D_thdlx")
+
+[node name="Player" parent="." instance=ExtResource("1_kkm5n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.629555, 0)
