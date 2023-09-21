@@ -24,7 +24,7 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
-		velocity.y -= gravity
+		velocity.y -= gravity * delta
 	
 	if Input.is_action_just_pressed("jump") and jump_count < jump_force.size():
 		velocity.y = jump_force[jump_count]

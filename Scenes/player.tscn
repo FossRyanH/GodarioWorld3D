@@ -23,6 +23,7 @@ script = ExtResource("1_a3uby")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Visuals/Body"]
 transform = Transform3D(1, 0, 0, 0, 0.999956, 0.00935483, 0, -0.00935483, 0.999956, 0, 0.9, 0)
+gi_mode = 2
 height = 1.8
 sides = 16
 material = SubResource("StandardMaterial3D_hb1rk")
@@ -42,7 +43,7 @@ material = SubResource("StandardMaterial3D_apar6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraMount"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101026, 1, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 6)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
