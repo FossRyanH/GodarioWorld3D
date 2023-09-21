@@ -1,9 +1,10 @@
+Node3D
+CSGCylinder3D
+Tree
 Camera3D
 CollisionShape3D
 CSGTorus3D
 CSGBox3D
-CSGCylinder3D
-Node3D
 CharacterBody3D
 DirectionalLight3D
 WorldEnvironment

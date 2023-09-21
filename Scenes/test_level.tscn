@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://kfw1o08waukd"]
+[gd_scene load_steps=7 format=3 uid="uid://kfw1o08waukd"]
 
 [ext_resource type="PackedScene" uid="uid://cc3ffvtlrmokl" path="res://Scenes/player.tscn" id="1_kkm5n"]
 
@@ -31,6 +31,9 @@ volumetric_fog_sky_affect = 0.2
 albedo_color = Color(0.345098, 0.443137, 0.235294, 1)
 uv2_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ktpv"]
+albedo_color = Color(0.258824, 0.360784, 0.141176, 1)
+
 [node name="TestLevel" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -47,4 +50,449 @@ size = Vector3(300, 0.5, 300)
 material = SubResource("StandardMaterial3D_thdlx")
 
 [node name="Player" parent="." instance=ExtResource("1_kkm5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2293, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0167294, 0.191768, 0.070488)
+sprint_speed = 14.0
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Tree" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30572, -0.0602148, 0)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree2" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2591, -0.0602148, -20.1437)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree3" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.645, -0.0602148, -31.625)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree4" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.6288, -0.0602148, 25.5979)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree5" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.925, -0.0602148, -71.3161)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree6" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.441, -0.0602109, 64.5781)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree7" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.727, -0.0602109, -2.1805)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree8" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.2781, -0.0602109, -98.7784)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree9" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.278, -0.0602109, -87.7784)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree10" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9088, -0.0602148, 50.3698)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree11" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61927, -0.0602186, 29.0944)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree12" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6189, -0.0602186, 31.4038)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree13" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.5828, -0.0602224, -15.104)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree14" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4892, -0.0602224, 39.6783)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree15" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.2223, -0.0602224, 64.3366)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree16" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.2063, -0.0602224, 27.4149)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree17" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.206, -0.0602224, -18.5851)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree18" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.206, -0.0602224, 30.4149)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree22" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.273, -0.0602224, 102.93)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree23" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.938, -0.0602224, 73.8335)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree24" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.9383, -0.0602224, 106.833)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree25" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3843, -0.0602224, 115.074)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree26" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.348, -0.0602224, 139.079)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree19" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2472, -0.0602224, 108.919)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree20" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8855, -0.117367, 91.5816)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
+
+[node name="Tree21" type="Node3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.8011, -0.417367, 113.674)
+
+[node name="TreeTop" type="CSGCylinder3D" parent="Objects/Tree21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83071, 0)
+radius = 3.0
+height = 7.0
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_6ktpv")
+
+[node name="TreeBase" type="CSGCylinder3D" parent="Objects/Tree21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98735, 0)
+use_collision = true
+radius = 0.65
+height = 4.0
